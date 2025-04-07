@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "381613176101",
+    "project_id": "diabetease-firebase",
+    "storage_bucket": "diabetease-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:381613176101:android:6c794779bbc599ec2256cc",
+        "android_client_info": {
+          "package_name": "com.example.fyp_diabetease"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhRlRyHnA9fTbiaHBxBQ_FZBwa1bXjKks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

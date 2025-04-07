@@ -1,0 +1,41 @@
+buildscript {
+    ext.kotlin_version = '2.0.0'
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // Use the latest stable version for the Android Gradle Plugin
+        classpath 'com.android.tools.build:gradle:8.0.0'
+        
+        // Kotlin Gradle plugin version linked to the Kotlin version
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        
+        // Google services plugin for Firebase, Analytics, etc.
+        classpath 'com.google.gms:google-services:4.3.15'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.buildDir = '../build'
+
+// This is setting the build directories for all subprojects
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+
+// Ensure that the ':app' project is evaluated before the others (if needed)
+subprojects {
+    project.evaluationDependsOn(':app')
+}
+
+// Register the clean task for clearing build artifacts
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
